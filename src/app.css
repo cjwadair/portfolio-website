@@ -1,3 +1,11 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin "@iconify/tailwind4" {
+  prefixes: devicon, devicon-plain;
+}
+
+/* --current-color: #333444; */
+@source inline("devicon--{javascript, postgresql, rails-wordmark, linkedin, heroku, github, redis, memcached, tailwindcss, stimulus, hotwire, rspec, python, docker, sqlite, elasticsearch, vuejs, reactjs, angularjs, svelte, postman, sketch, figma }");
+
+@custom-variant dark (&:where(.dark, .dark *));
